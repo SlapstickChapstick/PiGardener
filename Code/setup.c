@@ -62,17 +62,18 @@ void CheckInstallation() {
 	CheckIfFileExists();
 	CheckForReadingsFile();
 
-	if (apache_folder_exists == 0 || web_folder_exists == 0)
+	if (apache_folder_exists == 0 || web_folder_exists == 0 || readings_file_exists == 0)
 	{
 		printf("\n\n\033[1;33mOne or more requirements were not met. Would you like setup to automatically install the component(s)?\n\n[Y/N] : \033[0m");
-	}
-	
-	char option;
-	scanf("%c", &option);
+		char option;
+		scanf("%c", &option);
 
-	if (option == 'y' || option == 'Y')
-	{
-		RunFirstTimeInstall(apache_folder_exists, web_folder_exists);
+		if (option == 'y' || option == 'Y')
+		{
+			RunFirstTimeInstall(apache_folder_exists, web_folder_exists);
+		}
+	} else {
+
 	}
 }
 
@@ -104,8 +105,18 @@ void RunFirstTimeInstall(int apache_status, int web_folder_status) {
 	} else if (readings_file_exists == 1) {
 		printf("\n\nSkipping creating the web page for readings as it already exists!");
 	}
+
+	printf("\n\nSetup finished. Please re-run this program.\n\n");
+	exit(0);
 }
 
 void CreateReadingsPage() {
-	
+	char page_content[] = "<html><head><title>PiGardener</title></head><body><h1>Testing web page creation!</h1></body></html>";
+
+	FILE *fptr;
+	fptr = fopen(readings_file,"w");
+	fprintf(fptr, "%s", page_content);
+	fclose(fptr);
+
+	printf("%s","\033[1;32m   DONE!\033[0m");
 }
