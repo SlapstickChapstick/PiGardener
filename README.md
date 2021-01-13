@@ -20,3 +20,19 @@ Software:
   - GCC/Build-essential
   - Apache2
   - WiringPi
+
+# Installation
+To install PiGardener, do the following
+
+**1. Make sure your OS is up to date**<br />
+Ubuntu/Debian/Raspbian:<br />
+`apt-get update && apt-get upgrade`
+
+**2. Clone this repo**<br />
+`git clone https://github.com/SlapstickChapstick/PiGardener.git` 
+
+**3. Navigate to the 'Build' folder and run the file in there**<br />
+`cd Build`<br />
+`./PiGardener`
+
+**Follow the on-screen instructions to get started**
