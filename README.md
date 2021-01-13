@@ -24,15 +24,15 @@ Software:
 # Installation
 To install PiGardener, do the following
 
-**Make sure your OS is up to date**
+**1. Make sure your OS is up to date**
 Ubuntu/Debian/Raspbian:<br />
 `apt-get update && apt-get upgrade`
 
-**Clone this repo**<br />
+**2. Clone this repo**<br />
 `git clone https://github.com/SlapstickChapstick/PiGardener.git` 
 
-**Navigate to the 'Build' folder and run the file in there**<br />
-`cd Build
-./PiGardener`
+**3. Navigate to the 'Build' folder and run the file in there**<br />
+`cd Build`<br />
+`./PiGardener`
 
 **Follow the on-screen instructions to get started**
