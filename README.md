@@ -24,7 +24,7 @@ Software:
 # Installation
 To install PiGardener, do the following
 
-**1. Make sure your OS is up to date**
+**1. Make sure your OS is up to date**<br />
 Ubuntu/Debian/Raspbian:<br />
 `apt-get update && apt-get upgrade`
 
