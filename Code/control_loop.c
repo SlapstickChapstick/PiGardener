@@ -9,6 +9,7 @@ char* loop_running = "false";
 
 void StartMainLoop() {
     loop_running = "true";
+
     while (loop_running == "true")
     {
         printf("Humidity : %d | Temperature : %d\n", humidity_reading, temperature_reading);

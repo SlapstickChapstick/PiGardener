@@ -111,7 +111,7 @@ void RunFirstTimeInstall(int apache_status, int web_folder_status) {
 }
 
 void CreateReadingsPage() {
-	char page_content[] = "<html><head><title>PiGardener</title></head><body><h1>Testing web page creation!</h1></body></html>";
+	char page_content[] = "<?php $option = htmlspecialchars($_GET['reading']);$file = fopen('readings.csv','r') or die ('Unable to read from readings file!');$content = fread($file,filesize('readings.csv'));$readings = explode(',', $content); if($option == 'humidity') { echo $humidity[0]; } elseif ($option == 'temperature') { echo $readings[1];} ?>";
 
 	FILE *fptr;
 	fptr = fopen(readings_file,"w");
