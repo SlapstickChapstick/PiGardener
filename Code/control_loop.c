@@ -13,5 +13,13 @@ void StartMainLoop() {
     {
         printf("Humidity : %d | Temperature : %d\n", humidity_reading, temperature_reading);
         usleep(3 * microsecond);
+
+        char page_content[1024];
+        sprintf(page_content, "%d,%d", humidity_reading, temperature_reading);
+
+        FILE *fptr;
+        fptr = fopen("/var/www/html/PiGardener/readings.csv","w");
+        fprintf(fptr, "%s", page_content);
+        fclose(fptr);
     }
 }
