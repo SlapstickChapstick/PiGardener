@@ -1,5 +1,5 @@
 # PiGardener
-C program for Raspberry Pi, which gets readings from a DHT22 sensor and hosts a web page. The information can then be obtained by a mobile app using GET requests.
+PiGardener is a Python/PHP based program for Raspberry Pi, which gets readings from a DHT22 sensor and hosts a web page. The information can then be obtained by a mobile app using GET requests.
 
 # The Aim
 The aim is to have a program that automatically takes humidity and temperature readings in a greenhouse, while providing the user with a way to access the readings via either a web page or a mobile app.
@@ -36,3 +36,5 @@ Ubuntu/Debian/Raspbian:<br />
 `./PiGardener`
 
 **Follow the on-screen instructions to get started**
+
+# Make sure that your Apache installation has PHP enabled to use this program!!
