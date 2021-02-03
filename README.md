@@ -32,8 +32,8 @@ Ubuntu/Debian/Raspbian:<br />
 `git clone https://github.com/SlapstickChapstick/PiGardener.git` 
 
 **3. Navigate to the 'Build' folder and run the file in there**<br />
-`cd Build`<br />
-`./PiGardener`
+`cd Code`<br />
+`python3 setup.py`
 
 **Follow the on-screen instructions to get started**
 
