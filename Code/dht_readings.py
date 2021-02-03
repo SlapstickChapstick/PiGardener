@@ -4,13 +4,8 @@ import adafruit_dht
 import subprocess
 import os
  
-# Initial the dht device, with data pin connected to:
+# Initialise the dht device, with the data pin connected to:
 dhtDevice = adafruit_dht.DHT22(board.D4)
- 
-# you can pass DHT22 use_pulseio=False if you wouldn't like to use pulseio.
-# This may be necessary on a Linux single board computer like the Raspberry Pi,
-# but it will not work in CircuitPython.
-# dhtDevice = adafruit_dht.DHT22(board.D18, use_pulseio=False)
 
 def RunReadingsLoop():
         
@@ -35,7 +30,7 @@ def RunReadingsLoop():
                 f.close()
          
             except RuntimeError as error:
-                # Errors happen fairly often, DHT's are hard to read, just keep going
+                # If an error happens, just keep running the code.
                 print(error.args[0])
                 time.sleep(2.0)
                 continue
